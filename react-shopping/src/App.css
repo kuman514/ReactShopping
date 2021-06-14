@@ -1,5 +1,23 @@
+* {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  width: 1000px;
+}
+
+@media (max-width: 1000px) {
+  .App {
+    width: 100vw;
+  }
 }
 
 .LoadingScreen {
@@ -12,7 +30,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
   pointer-events: visible;
 }
 
@@ -46,4 +63,19 @@
 
 .Hidden {
   display: none;
+}
+
+.UpperMenu {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  align-items: flex-end;
+  height: 100px;
+}
+
+.TopMenuButton {
+  text-align: left;
+}
+
+.LoginInfo {
+  text-align: right;
 }
