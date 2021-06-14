@@ -18,7 +18,15 @@ class UpperMenu extends React.Component<UpperProps, UpperState> {
   public render(): JSX.Element {
     return (
       <div className="UpperMenu">
-        상단 메뉴 바
+        <div className="TopMenuButton">
+          메뉴
+        </div>
+        <div className="AppLogo">
+          <h1>React Shopping</h1>
+        </div>
+        <div className="LoginInfo">
+          로그인
+        </div>
       </div>
     );
   }
