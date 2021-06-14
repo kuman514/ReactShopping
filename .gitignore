@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/react-shopping/node_modules
+/react-shopping/.pnp
+/react-shopping/.pnp.js
+
+# testing
+/react-shopping/coverage
+
+# production
+/react-shopping/build
+
+# misc
+/react-shopping/.DS_Store
+/react-shopping/.env.local
+/react-shopping/.env.development.local
+/react-shopping/.env.test.local
+/react-shopping/.env.production.local
+/react-shopping/.eslintcache
+
+/react-shopping/npm-debug.log*
+/react-shopping/yarn-debug.log*
+/react-shopping/yarn-error.log*
+
+/Plans
