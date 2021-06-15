@@ -1,5 +1,8 @@
 import React from 'react';
 
+import RecommendedList from './RecommendedList';
+import RecentList from './RecentList';
+
 interface MainProps {
 
 }
@@ -18,7 +21,8 @@ class MainPage extends React.Component<MainProps, MainState> {
   public render(): JSX.Element {
     return (
       <div className="MainPage">
-        메인 페이지
+        <RecommendedList></RecommendedList>
+        <RecentList></RecentList>
       </div>
     );
   }
