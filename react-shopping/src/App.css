@@ -12,6 +12,8 @@
   text-align: center;
   height: 100vh;
   width: 1000px;
+  display: grid;
+  grid-template-rows: 100px 1fr;
 }
 
 @media (max-width: 1000px) {
@@ -69,7 +71,6 @@
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   align-items: flex-end;
-  height: 100px;
 }
 
 .TopMenuButton {
@@ -78,4 +79,9 @@
 
 .LoginInfo {
   text-align: right;
+}
+
+.MainPage {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
