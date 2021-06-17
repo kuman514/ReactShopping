@@ -4,8 +4,7 @@ interface ListItemProps {
   itemId: number,
   itemName: string,
   price: number,
-  stock: number,
-  thumbnail?: string
+  stock: number
 }
 
 interface ListItemState {
@@ -21,8 +20,22 @@ class ListItem extends React.Component<ListItemProps, ListItemState> {
 
   public render(): JSX.Element {
     return (
-      <div className="ListItem">
-        추천 상품 리스트
+      <div className="ListItem" key={this.props.itemId}>
+        <div>
+          <img
+            src={`../images/thumbnails/${this.props.itemId}.png`}
+            alt={`${this.props.itemName}`}
+          />
+        </div>
+        <div className="ListItemTitle">
+          {this.props.itemName}
+        </div>
+        <div className="ListItemPrice">
+          {this.props.price}원
+        </div>
+        <div className="ListItemStock">
+          잔여 {this.props.stock}개
+        </div>
       </div>
     );
   }

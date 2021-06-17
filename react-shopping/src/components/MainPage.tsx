@@ -2,6 +2,7 @@ import React from 'react';
 
 import RecommendedList from './RecommendedList';
 import RecentList from './RecentList';
+import Data from './Data';
 
 interface MainProps {
 
@@ -21,7 +22,7 @@ class MainPage extends React.Component<MainProps, MainState> {
   public render(): JSX.Element {
     return (
       <div className="MainPage">
-        <RecommendedList></RecommendedList>
+        <RecommendedList items={Data}></RecommendedList>
         <RecentList></RecentList>
       </div>
     );
