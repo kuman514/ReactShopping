@@ -12,12 +12,6 @@ interface ListItemState {
 }
 
 class ListItem extends React.Component<ListItemProps, ListItemState> {
-  /*
-  constructor(props: ListItemProps) {
-    super(props);
-  }
-  */
-
   public render(): JSX.Element {
     return (
       <div className="ListItem" key={this.props.itemId}>
