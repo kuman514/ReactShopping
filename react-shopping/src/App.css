@@ -85,3 +85,8 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
+
+.RecommendedList, .RecentList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -21,12 +21,6 @@ class ListItem extends React.Component<ListItemProps, ListItemState> {
   public render(): JSX.Element {
     return (
       <div className="ListItem" key={this.props.itemId}>
-        <div>
-          <img
-            src={`../images/thumbnails/${this.props.itemId}.png`}
-            alt={`${this.props.itemName}`}
-          />
-        </div>
         <div className="ListItemTitle">
           {this.props.itemName}
         </div>

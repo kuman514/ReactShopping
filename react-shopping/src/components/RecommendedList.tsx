@@ -10,15 +10,7 @@ interface RecommendedState {
 }
 
 class RecommendedList extends React.Component<RecommendedProps, RecommendedState> {
-  /*
-  constructor(props: RecommendedProps) {
-    super(props);
-    this.setState({
-    });
-  }
-  */
-
-  private renderListItems(): JSX.Element {
+  private renderListItems(): JSX.Element[] | JSX.Element {
     if (this.props.items) {
       const finalResult: JSX.Element[] = [];
       for (const item of this.props.items) {
@@ -31,11 +23,7 @@ class RecommendedList extends React.Component<RecommendedProps, RecommendedState
           />
         );
       }
-      return (
-        <div>
-          {finalResult}
-        </div>
-      );
+      return finalResult;
     }
 
     return (
@@ -48,7 +36,6 @@ class RecommendedList extends React.Component<RecommendedProps, RecommendedState
   public render(): JSX.Element {
     return (
       <div className="RecommendedList">
-        추천 상품 리스트
         {this.renderListItems()}
       </div>
     );
