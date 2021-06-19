@@ -4,7 +4,8 @@ interface ListItemProps {
   itemId: number,
   itemName: string,
   price: number,
-  stock: number
+  stock: number,
+  onClickItem: Function
 }
 
 interface ListItemState {
@@ -14,7 +15,12 @@ interface ListItemState {
 class ListItem extends React.Component<ListItemProps, ListItemState> {
   public render(): JSX.Element {
     return (
-      <div className="ListItem" key={this.props.itemId}>
+      <div
+        className="ListItem"
+        onClick={() => {
+          this.props.onClickItem(this.props.itemId);
+        }}
+      >
         <div className="ListItemTitle">
           {this.props.itemName}
         </div>

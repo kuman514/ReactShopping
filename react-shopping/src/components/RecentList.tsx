@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface RecentProps {
-
+  
 }
 
 interface RecentState {
@@ -11,8 +11,9 @@ interface RecentState {
 class RecentList extends React.Component<RecentProps, RecentState> {
   constructor(props: RecentProps) {
     super(props);
-    this.setState({
-    });
+    this.state = {
+
+    };
   }
 
   public render(): JSX.Element {

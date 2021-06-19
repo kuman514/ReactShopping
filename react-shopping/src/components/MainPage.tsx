@@ -5,7 +5,7 @@ import RecentList from './RecentList';
 import Data from './Data';
 
 interface MainProps {
-
+  onShowItem: Function
 }
 
 interface MainState {
@@ -15,15 +15,20 @@ interface MainState {
 class MainPage extends React.Component<MainProps, MainState> {
   constructor(props: MainProps) {
     super(props);
-    this.setState({
-    });
+    this.state = {
+
+    };
   }
 
   public render(): JSX.Element {
     return (
       <div className="MainPage">
-        <RecommendedList items={Data}></RecommendedList>
-        <RecentList></RecentList>
+        <RecommendedList
+          items={Data}
+          onShowItem={this.props.onShowItem}
+        />
+        <RecentList
+        />
       </div>
     );
   }

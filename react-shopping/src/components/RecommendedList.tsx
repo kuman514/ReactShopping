@@ -2,7 +2,8 @@ import React from 'react';
 import ListItem from './ListItem';
 
 interface RecommendedProps {
-  items?: string[][]
+  items?: string[][],
+  onShowItem: Function
 }
 
 interface RecommendedState {
@@ -20,6 +21,8 @@ class RecommendedList extends React.Component<RecommendedProps, RecommendedState
             itemName={item[1]}
             price={Number(item[2])}
             stock={Number(item[3])}
+            key={Number(item[0])}
+            onClickItem={this.props.onShowItem}
           />
         );
       }

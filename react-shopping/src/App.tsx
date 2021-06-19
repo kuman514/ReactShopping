@@ -10,7 +10,8 @@ interface AppProps {
 }
 
 interface AppState {
-  mode: string
+  mode: string,
+  currentSelected: number
 }
 
 class App extends React.Component<AppProps, AppState> {
@@ -20,7 +21,8 @@ class App extends React.Component<AppProps, AppState> {
       this.hideLoading();
     });
     this.state = {
-      mode: 'main'
+      mode: 'main',
+      currentSelected: -1
     };
   }
 
@@ -42,12 +44,19 @@ class App extends React.Component<AppProps, AppState> {
     switch (this.state.mode) {
       case 'main':
         return (
-          <MainPage></MainPage>
+          <MainPage onShowItem={(itemNo: number): void => {
+            this.setState({
+              mode: 'item',
+              currentSelected: itemNo
+            });
+          }}/>
         );
     }
 
     return (
-      <MainPage></MainPage>
+      <div>
+        모드가 잘못되었습니다.
+      </div>
     );
   }
 
