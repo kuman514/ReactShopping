@@ -90,3 +90,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.ListItem {
+  transition: cubic-bezier(1, 0, 0, 1) 0.2s all;
+}
+
+.ListItem:hover {
+  cursor: pointer;
+  background-color: cadetblue;
+}
